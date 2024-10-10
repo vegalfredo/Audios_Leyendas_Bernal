@@ -1,1 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa de los FAMONSTRUOS</title>
+    <style>
 
+
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .paragraph-container {
+            margin-bottom: 1px;
+        }
+        .typewriter-font {
+            font-family: "Courier New", Courier, monospace;
+        }
+        .controls {
+            margin-top: 150px;
+        }
+        {
+        margin-top:0;margin-bottom: 0px; /* Ajusta este valor según lo corto que quieras que sea el interlineado */
+        }
+        .nav-button {
+            background-color: rgb(246, 81, 21);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 15px; /* Esquinas redondeadas */
+        }
+        .nav-button:hover {
+            background-color: rgb(233, 84, 10);
+        }
+        .inline-container {
+            display: block;
+            align-items: center;
+            margin-top: 50px;
+        
+            
+        }
+        .inline-container h2 {
+            display: block;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff; /* Cambia esto según tu diseño */
+            z-index: 1000;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin-top: 5px; /* Ajusta este valor según sea necesario */
+            margin-inline-start: 1%;
+            
+        }
+
+        .header h2 {
+            margin: 0; /* Elimina el margen predeterminado del encabezado */
+            /* Añade estilos adicionales según sea necesario */
+        }
+
+        .reload-button {
+        background-color: #ff5f6d;
+        background-image: linear-gradient(315deg, #f24907d1 0%, #000000 74%);
+        color: white;
+        border: none;
+        padding: 12px 15px;
+        cursor: pointer;
+        border-radius: 25px;
+        font-size: 13px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        }
+        .reload-button:hover {
+        background-image: linear-gradient(315deg, #000000 0%, #e95b0eef 74%);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+        }
+        .reload-button:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        } 
+
+        
+
+        /* Media Queries para responsividad */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.5em; /* Ajusta el tamaño del texto en dispositivos móviles */
+            }
+
+            .nav-button {
+                padding: 5px 10px; /* Ajusta el tamaño del padding en dispositivos móviles */
+                font-size: 0.9em; /* Ajusta el tamaño de la fuente en dispositivos móviles */
+            }
+        
+
+
+                 
+    </style>
+
+    <link rel="icon" href="logo_escenario.png" type="image/png">
+    <link rel="apple-touch-icon" href="logo_escenario.png">
+    <link rel="icon" sizes="192x192" href="logo_escenario.png">
+    <link rel="icon" sizes="512x512" href="logo_escenario.png">
+
+    <meta property="og:title" content="La Casa de los Famonstruos">
+    <meta property="og:description" content="La Casa de los Famonstruos (GUIÓN)">
+    
+    
+    <meta property="og:image" content="https://i.pinimg.com/736x/68/ab/bd/68abbd100048ff05908d77e7118f3e6a.jpg">
+    <meta property="og:url" content="https://i.pinimg.com/736x/68/ab/bd/68abbd100048ff05908d77e7118f3e6a.jpg">
+
+    
+    <meta property="og:type" content="website">
+    
+
+
+</head>
+        <!-- Inicio  y PRIMERA ESCENA ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ -->
+<body>
+
+    <!-- Zona sensible para detectar el movimiento del mouse o toque -->
+    <div id="zona-sensible"></div>
+
+    <!-- Barra de Menú -->
+    <div id="menu-barra">
+        <button onclick="actualizar()">Actualizar</button>
+        <button onclick="mostrarPersonajes()">Personajes</button>
+        <button onclick="mostrarOpening()">Opening</button>
+    </div>
+
+    
+    <div class="header">
+        <h1>La Casa de los Famonstruos</h1>
+        
+            
+        <!-- Aquí puedes agregar tus imágenes y botones -->
+        
+        <button class="reload-button" onclick="hardReload()">Actualizar</button>
+        <button class="nav-button" onclick="location.href='#personajes'">Personajes</button>
+        <button class="nav-button" onclick="location.href='#opening'">Opening</button>
+        <button class="nav-button" onclick="location.href='#Maly_inspirado'">Maly Inspirado</button>
+        <button class="nav-button" onclick="location.href='#El_tango'">Tango</button>
+        <button class="nav-button" onclick="location.href='#nominaciones'">Nominaciones</button>
+        <button class="nav-button" onclick="location.href='#intermedio'">Intermedio</button>
+
+       
+    
+    </div>
+
+    <div class="paragraph-container">
+        
+                   
+        <div class="controls">
+            
+            
+
+        <h2 id="personajes">♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦</h2><br><br>
+        <div class="inline-container">
+        <h2>Personajes</h2>
+
+        <p style="color: rgb(85, 79, 79);font-weight: bold;">La Jefa:</p>
+        <p style="color: rgb(85, 79, 79);">Voz en OFF, que interactua con los habitantes de la casa y les da instrucciones, </p><br>
+
+        <p style="color: rgb(4, 172, 4);font-weight: bold;">Doña Ana Lisa Milano:</p>
+        <p style="color: rgb(4, 172, 4);">Señora ancianita que se ve muy linda como cualquier abuelita, pero es toda una blasfema y grosera sin dejar su ternura maternal</p><br>
+        
+        <p style="color: rgb(255, 0, 0);font-weight: bold;">La Momia:</p>
+        <p style="color: rgb(255, 0, 0);">Una Momia Egipcia “Desconocida” pero dicen que es el hijo perdido de TutancaMón, es bonachón y muy fresa, se cree de la realeza</p><br>
+
+        <p style="color: rgb(243, 5, 152);font-weight: bold;">El Conde Drácula:</p>
+        <p style="color: rgb(243, 5, 152);">Tiene porte y elegancia, medio afeminado,  pero sufre del trastorno de personalidad múltiple</p><br>
+
+        <p style="color: rgb(200, 0, 255);font-weight: bold;">Bruja Zorraya:</p>
+        <p style="color: rgb(200, 0, 255);">Poderosa, glamurosa, desalmada, desnalgada, deschichada y bien chiflada</p><br>
+
+        <p style="color: rgb(0, 0, 255);font-weight: bold;">Maly Boo:</p>
+        <p style="color: rgb(0, 0, 255);">Un fantasma atractivo medio exhibicionista, se siente el todas mías pero es un poco lento de pensamiento y nunca entiende los chistes y los albures que le hacen sus compañeros de casa</p><br>
+                        
+        </div>
+        <br><br>
+
+
+        <h2 id="opening">Opening</h2>
+
+        <p style="color:rgb(0, 0, 0);"class="typewriter-font">Opening - Michael Jackson - Thriller</p>
+            <button onclick="playAudio('01 Opening Casa de los FAMONSTRUOS.mp3')">Reproducir Thriller de M. Jackson </button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+            <a style="color:rgb(0, 0, 0);"class="typewriter-font">Aparecen los personajes bailando y cuando ya 
+                han sido presentados todos, entonces bailamos al mismo tiempo los mismos pasos que Michael Jackson,
+                al terminar se escucha la voz de la Jefa... </a><br><br>
+
+
+            <button onclick="playAudio('02 La Jefa_Primera_aparicion.mp3')">la Jefa primer audio </button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+        
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> Y Cruda... Uy Draculín ahora sí que te darán bufette charro... ósea pura reata.</p>
+
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> Reproducir Audio</p>
+            <button onclick="playAudio('03 La Jefa - Zorraya te estoy hablando.mp3')">la Jefa "Zorraya te estoy hablando </button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ay que bonito haber llegado a la final con ustedes mis niños, de verdad que para mi fue un honor haber compartido con ustedes, y haber llegado con ustedes,¿ ya les dije: "con ustedes"?..</p>
+        
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :El horror fue todo nuestro Doña Milano, no sabe cómo le agradecemos haber llegado a la final y sobre todo viva, pues usted ya huele como a Barbacha</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :jajajajajaja que chistoso, te pasas Momia jajajajajajaja ¿Pero no entendí, por qué a barbacoa?</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Woeee, ¡obvis!, porque ya está casi en el hoyo, o sea hello, si no entendiste ¿porque te ríes pap's?...</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ya no andes de payaso hijito…. de tu pinche ma….perdón, no en serio, me gustó mucho compartir con todos ustedes, aunque yo se que va a ganar Draculito!!!! </p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :¡Dracu, Culito, culititito!, ¡Dracu, Culito, culititito!...</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¡Culo culito culititito!</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Muchas Gracias Doña Milano, para mi también fue un enorme… el placer</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Oiga Doña Milano, después de tantos días y no nos ha dicho su nombre, solo sabemos que se apellida Milano.</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :A pues es que no me la habían preguntado, pero yo me llamo Ana Lisa.</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¡No chingue!, ¿es en serio?.... Ana Liza ... ¡Jajajajajaja!</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :¿De qué nos reímos?</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ay mi pendejo, perdón mi pequeño.</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Ni tan pequeño, porque su apellido es Milano jajaja con que su segundo apellido no sea ¡profundo!</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :No, mi segundo apellido es Aguado, de los Aguado de abolengo.</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Salió peor anciana, Ana Liza Milano Aguado jajajajaja que chinga le pusieron, con razón no nos había dicho su nombre completo, déjelo así, como Doña Milano.</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Pues la verdad, yo ya quiero que termine todo esto, ya me quiero ir con mi primo Gasparín al otro lado.</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :¿al más allá, al más acá o pásalas pa´ acá o te las paso pa´ allá?</p><br><br><br>
+
+        <h2 id="Maly_inspirado">Maly Boo Inspirado</h2>
+        
+        
+        <button onclick="playAudio('05 Musica Inspiradora.mp3')">Música INSPIRADORA </button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" />
+        
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Mas allá del tiempo, más allá de la sangre, de la belleza, de las promesas… Ahhh no te creas, pues al otro lado, a estados unidos porque ahí si por sacárnosla, digo por sacarles varios sustos pagan mejor y aquí quieren todo fiado</p>
+
+
+
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Pues hazle como yo, cuando quieren que se las chupe gratis…</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :¿¡Queeeeeeeeee?!</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> : ¡¡¡LA SANGRE!!! Aplica la mía, hoy no fío, a ti sí, mañana no fío… a ti sí, a usted no lo fío, a ti sí…</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :¿Me fias a mí wueeee?</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :a ti te cobro doble, a ti gratis…</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Allá pagan en verde mi hermano, ya siento la…</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :¿Pagan con mota paps?, mejor debería pagar con Coca wueee?</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Cállate, como dices esas cosas…</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Con esta coca Cola mi rey…. Pues que pensabas wueeee</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ay otro pendejo, baby, ya sácate la papa de la boca y del brazo y de la pierna y de la panza, que vas a reventar ve esas vendas ya todas apretadas.</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Osea me estas diciendo gordo? Yo no estoy gordo mi reina, estoy lleno de amor y apretadito!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¡Apretada estoy yo! Maly ven y mejor asústame la cotorra, que después de tantos días encerrada ya siento que me quémo.</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Quemada ya estas, en sociedad y por tu aquelarre, porque ya estás a dos pasos del infierno, maldita maliciosa, lujuriosa, morbosa, mocosa y todo lo que termine en osa.</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Hermosa, preciosa, glamurosa, diosa…</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Babosa, grasosa, sebosa mugrosa,</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Peligrosa, envidiosa, apestosa, liosa…wueeee</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Tubo, anochecer, melones, licuadora, colchones, refrigeradores, o algo de fierro viejo que venda..!!</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :¿Es neta Wueee? Esas palabritas cero que ver, osea mejor súbete a un árbol y ¡MADURA!</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :¡Cállate!, No le digas que se suba cosas, así fue como murió, te explico: andaba en el tubo bailando, y subía la pierna, y luego hizo 5 lagartijas enfrente del tubo, y luego hizo 5 sentadillas enfrente del tubo y se distrajo viendo unos “melones”, esos nooooo, de acá y ya no sabemos si murio de la caída o del susto  y kuiiiiii.</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Y kuiiiiii?</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Kuiii da atee mijito kuiii daaa teee, es broma pepa pig, digo momin. Ya pero mejor dame ese mango que te va a subir el azúcar , no, ya en serio, no estemos peleando, es nuestra última noche juntos, mejor deberíamos de disfrutarla, ¡hagamos algo sano, bonito, en unión y armonía! Para dejarle un lindo recuerdo nuestro público…. ¡¡Ya se!!, ¡Que tal si nos metemos todos en pelotas a la alberca!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :No Doña Milano, en vez de dejarle un bonito recuerdo al público, les va a dejar un trauma que jamás olvidara y es hora de la cena, si usted se encuera los va a hacer guacarear y yo quiero que el señor de ahí me haga Guacarear..</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Mejor que guacaree la momia a ver si así adelgaza, ya dame ese mango mijo no se te vayan a reventar las vendas.. es broma es broma mijito.</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :De broma en broma, la verdad se asoma doña Milano.</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Tienes toda la boca llena de razón, mi querido Draculin, ya ves que se te asoma lo gays, que digo se te asoma, mas bien te florece como reina de la primavera.</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :¡Como se atreve!, tiene suerte que me guste la carne fesca, y no la cesina por que si no ya la estaria destripando para la cena.</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Si es cierto, es hora de la cena y la jefa nos dijo que sí nos iban a dar de cenar!, ¡Jefa, jefa!, ¿me oye?, ¿me siente?, ¿me escucha?, ¿me sabrosea?, ¿me desea?..</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Yo creo que no te escucha ni te ve porque eres un fantasma jajajajaja que simpático soy… ¡Jefa!</p>
+        
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio Jefa te escucho Conde</p>
+            <button onclick="playAudio('04 La Jefa_te escucho Conde.mp3')">La Jefa_te escucho Conde </button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+        
+        
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Contéstele al invisible! Lo ves Maly Boo, tenía razón. Oiga Jefa, dijo que nos iban a traer la cena y a ún no ha llegado, si nos van a dar de comer o no?</p>
+        
+        
+        
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio Jefa - De comer no, de cenar sí</p>
+            <button onclick="playAudio('06 La Jefa_De comer no, de cenar sí.mp3')">La Jefa_De comer no, de cenar sí </button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+        
+        
+        
+        
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ay que pinche chistosita anda esta pendeja, hija de la ching…..</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio Jefa - La estoy escuchando Doña Milano..</p>
+            <button onclick="playAudio('07 La Jefa_La estoy escuchando Doña Milano.mp3')">La Jefa_La estoy escuchando Doña Milano</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Perdón jefa, usted disculpe … Hija de la chingada….</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Pues no se ustedes, pero neta a mí ya se me hizo bien larga..</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :¿Quééééé?!</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :La espera viejita, la espera.. Ya se me hizo muy larga la espera.</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Pues no se nota mijito, mejor metamonos todos en ¡pelotas a la alberca!</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :¡Que noooooooooo!</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :¡Tengo una super idea mega cool! Que tal si cada uno dice quien de los eliminados les caía mas mal, es bien padre hablar mal de la gente a sus espaldas y hacerlos pedazos.</p><br>
+        <p class="typewriter-font">Los 3 en escena se voltean de espaldas y Momia empieza a decir cosas malas de ellos</p><br>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :El drácula es bipolar tanto de carácter como de nalgas, a la viejita decrépita le cuelgan las chichis hasta las rodillas, y el Maly boo es tan tonto tan tonto que votó por MORENA.</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :A mi también me gusta hablar mal de la gente a sus espaldas.</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :Es Maly boo cero que ver, ese pinche pendejo de Maly me lo voy a follar..</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Yo le doy la espalda, la nuca, las nalgas todo..</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ay no puede ser Maly Boo (sarcasmo) de verdad que que inteligente eres, no te habrás caído de chiquito? Ups perdón! Si te caíste pero de grandote jajaja</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Grandote te voy a dejar pero el…</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¡HOYO!</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :¿Quéeeeee?</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¡Pollo!, me acorde que la jefa dijo que vamos a cenar pollo</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Ah si si si al rato cenamos wii que rico, regresando al tema de hablar mal de los ex participantes, yo empiezo nenes!!!! A mi el que me caía del mega navo, era Frankestein Marcelo.</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :!Naaaaaaaaaaaaaaaaaaa¡</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :O sea se la pasaba insultando a las babys de la casa…</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :!Neeeeeeeeeeeeeeeeee¡</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¿Se la pasaba insultándome a mí?</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :¡Ay pobrecita dijimos Babys, no señoras aguadas!</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Y todo el tiempo super atacante con todos</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :!Niiiiiiiiiiiiiiiiiiiiiiiiiiiiiii¡</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Solo porque es uno de los monstruos mas antiguos y famosos de las redes…</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :!Nooooooooooooooo¡</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Sentía que podía hacer lo que el quisiera, pero no se dio cuenta que con su actitud solo perdió a miles de seguidores….</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :!Nuuuuuuuuuuuuuuuuuu¡</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :¡Quedó súper mal parado!</p>
+
+
+
+        <h2 id="El_tango">El Tango</h2>
+
+
+            <p class="typewriter-font">Empieza a sonar tango para que bailen Dracula y la Bruja</p><br>
+            <button onclick="playAudio('08 Primer tango para Confrontamiento.mp3')">Tango confrontación</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Justo era lo que quería, que quedara bien parado.</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Que Zorra..ya, eres, bien pecadora y lujuriosa horrorosa</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Bien parado con sus seguidores draculito, a mi si me caía bien, pues en que estás pensando???? El que hambre tiene en pan piensa, o bueno, en tu caso el que en moronga piensa, no serás medio, medio….. ya sabes, con eso de que dicen que los vampiros no son ni de aquí ni de allá</p>
+
+        <button onclick="stopAudio()">Detener tango </button><br><br>
+
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Estas igual que Doña Milano. Aunque Como decía Juan Gabriel, lo que se ve no se juzga</p>
+        <p class="typewriter-font">Empieza a sonar canción de Juan Gabriel Fragmento</p>
+            <button onclick="playAudio('09 Tienes unos ojos hermosos.mp3')">Cancion del Juanga</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :No se pregunta estúpido</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Y entonces para que me andas preguntando babosa!</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Bueno y a ti ¿Quipen te caía mal?... ¡Zorra!, ¡Ya!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¿Qué?,que paso?, que decías, es que andaba ocupada…</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Te preguntaba que a ti quién te caía mal, de los habitantes de la casa de los famostruos que ya se fueron y así wueee..</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Pues a la que yo no soportaba era a la pinche Mariana llorona, todo el santo día, digo el maldito día se la pasaba a llora que llora con franki Marcelo, hacía que me doliera la cabeza con sus gritos: "¡ay mis hijos!, Ay esto ay lo otro y se la pasaba llora, que llora y llora...</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Ay pobrecita y tu querías que el marcelo estuviera contigo y ora y ora y ora..</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Además era muy estricta con la comida, ya ven como se peleo conmigo por mi manguito…</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :No chingues Gomita, digo Momita no fue solo un mango era la canasta completa es que también eres bien tragón y estoy de acuerdo con lo del mango, es mas ¡dámelo ya!</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Pues a mí la que me cae super mal es Karla Panini, esa lavandera sí que era de lo peor, eso de quitarle al marido a su mejor amiga, no es de Dios</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ay chinga chinga, ¿a poco Karla Panini estuvo en esta casa de los Famonstruos?, No la vi.</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Pues no, pero es la que me cae mal. ¿O tenía que ser a fuerza de los que estuvieron en la casa?</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Osea ya olvídalo rey, de verdad que tu si estás cañón, eres super ultra mega nada queveriento weeeeeee. Además, nos urge un fashion emergency contigo, no puedo creer que solo traigas una sábana encima.</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Pues yo no sé, cuando colgué los tenis y mi ropa solo traía puesta mi tanga y llegando acá me pusieron esto que porque había una muy grande razón y podría provocar sustos que dan gusto, sabe a que se referían, si estoy algo feo, pero no es para tanto ¿quieren que me la quite? Nada mas no se vayan a espantar mucho</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :!Nooooooo!</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Uyyy esta bien no me la quito, que feofobicos son.</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Osea que no nos vamos a espantar.</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Si quítatela mijito estamos a 89 grados Celsius farenheit.</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Con razón estoy todo sudado.</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Ayy a mi si espántame panteón!!! que rico!!! Que rico clima para estar en tanga.</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Pero mijito Maly Boo, tú eres Argentino o eres chilango, por que hablas como los dos?</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Pues yo soy de TEPITO, pero hablo como argentino por que es más fácil quedarme en los castings.</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :En eso vente para acá mijito, te voy a hacer un casting, quiero que me enseñes todo el TEPITO….</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :No, no te agobies, tu fresh así con tu sabanita vale. Estábamos diciendo quien nos caí mal ¿Bueno y a ti Draculón?</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Draculon jajajajaja ¿pero de dónde?. si este conde tiene ¡nalgas de aspirina, tiene espalda infinita!</p>
+
+       
+        <p class="typewriter-font">Empieza a sonar fondo MUSICAL guapachoso</p>
+            <button onclick="playAudio('10 Fondo Musical LA SUAVECITA.mp3')">Fondo Guapachoso</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Ay Brujita, pues tu no eres la más agraciada, y si muy desgraciada, claro que tengo nalgas en cambio tu pareces tarea de kínder! ¡Dos planas!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Pues si tienes nalgas pero a lo mejor las dejaste en el otro pantalón Draculito o se las prestaste de relleno a la angelita Aguilar, una ya no sabe si estás de espaldas o parado de manos jijijiji</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :No voy a discutir con una bruja caldufa, eres tan fea tan fea que, cuando pasas por una construcción los albañiles se ponen a trabajar. </p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Tú eres tan feo tan feo pero tan feo que cuando naciste tu madre en vez de darte pecho, te dio la espalda…</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Tu eres tan fea tan fea que cuando naciste el doctor te tiró a ti y se quedó con la placenta..</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Tú eres tan feo tan feo pero tan feo que cuando naciste el doctor dijo: "Sueltelo, si vuela es vampiro"</p>
+
+        <button onclick="stopAudio()">Detener fondo Guapachoso</button><br><br>
+
+
+
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Hay me chingaste.. Sí soy Vampiro… Pero, déjame continuar. A mi quien me caía mal era el mitad hombre lobo y mitad obeja de Ricardo, que en un mundo de nubes grises el era la mas negra y cuando se metía a la alberca, olía a puro perro mojado. Lo peor eran las noches de luna llena, cuando se salía a aullar como loco a todo su disque ejercito, mínimo fuera afinado así como yo.</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¡Ay no ma…. Menir tu mamá! ¿A poco si eres afinado Draculito?</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :¡Obviamente!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¿Ay a poco sí?, A ver cántate algo…</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :¿Cuál quieres que te cante?</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Tócame la…</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Ay iuu no wuacala que asco, te dije que canto, no que toco algo estúpida</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Pues ándale ya canta algo, lo que quieras, menos algo de peso pluma</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Ayy es la que traía preparada: "Compa que le parece esa morra la que anda bailando sola.. "  ¡Ya se cual cantar  Música maestro!</p>
+
+
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Pues si tu cantas, yo se bailar fíjate…</p>
+
+        <p class="typewriter-font">Empieza música de streaptease</p>
+            <button onclick="playAudio('11 Música de Streaptease.mp3')">Música de Streaptease</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+
+
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Déjate de mamadas mary jane y baila bien, ¡que baile, que baile!</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Osea hellooooo, ¿qué onda con la viejita decrépita?, yo pensé que estaba dormida o ya se había muerto wueee!</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Dormido tenías el intestino porque se ve que no te hacia la digestión hijo de tu pinche ma…..</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :¡Exclamo la princesa!, Doña Milano cállese, una viejecita como usted se escucha muy mal diciendo tantas groserías</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Pues tu mejor cierra el hocico, quizás así dejas de tragar tanto y ya deja bailar a este bombón para por lo menos echarme un taco de ojo antes de irme al otro lado</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Ayyy si por favor ya vayase al mas allá…</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Cual mas allá, al USA para echarme taquito de ojo con los gueritos gringuitos sabrositos</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Mamaditos, peluditos uff así yo también quiero echarme un taco de ojo…. O mejor de lengua</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Enferma!!!!!!!</p>
+
+
+
+
+        <h2 id="nominaciones">La nominación</h2>
+
+
+
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la jefa de - "Habitantes escuchen con atención"</p>
+            
+        <button onclick="playAudio('12 LA JEFA Habitantes escuchen con atención.mp3')">Habitantes escuchen con atención</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ay pinche jefa, que no tiene nada mejor que hacer? tenía que interrumpir en lo mas sabroso del baile, ya se iba a quitar la tanga</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Doña Milano, pase al confesionario"</p>
+        <button onclick="playAudio('13 LA JEFA Doña milano.mp3')">LA JEFA Doña milano</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Si jefa, aproveche que sigue con nosotros la abuelita y no le dio un paro con el baile de este fantasmón</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :¡Ay pues a mi si me dio un paro!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Te digo que a ti si te truena la reversa o mas bien ya se te chingó toda la caja de velocidades con tanto siglo que se la han pasado clavándote la estaca</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :La estaca o la palanca? Ups!!!! Lo dije o lo pensé</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Doña Milano, la espero en el confesionario</p>
+
+        <button onclick="playAudio('14 LA JEFA LA espero en el confersionario.mp3')">LA JEFA LA espero en el confersionario</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Voy!!!! Voy corriendo</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Va más rápido que un caracol con Diarrea.</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :No hay prisa ancianita, para mí un siglo es como una hora.</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Apurese anciana que el tiempo en teatro es muy caro.</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :No va más lento, por que no le cuelgan más las chichis…!!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Ay ya ándele pinche viejita, que se va a acabar el programa en lo que usted llega al confesionario</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Oraaaaa no me empujes hija de la chingada</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :¿Jefa? Si nos van a dar de cenar o no? Ya me esta entrando la ansiedad y usted sabe como me pongo cuando tengo hambre, ya quiero enterrar mis colmillos</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Lo que tu quieres es que te la entierren no te hagas wey</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Jajajajajajajajaja hay Zorraya que risa jajajajajaja… pero no entendí</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Ya cállate Zorraya y tu neófito de la primaria publica no te metas conmigo y menos cuando tengo hambre que tu pudieras ser mi próximo alimento.</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "No quiero accidentes Conde"</p>
+
+        <button onclick="playAudio('15 LA JEFA No quiero accidentes Conde.mp3')">LA JEFA No quiero accidentes Conde</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Yo solo decía una chupadita pues.</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :ok jefa preciosa querida</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "hoy es la última nominación"</p>
+
+        <button onclick="playAudio('16 LA JEFA hoy es la última nominación.mp3')">LA JEFA hoy es la última nominación</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br><br>
+
+
+
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ok jefa, yo le quiero dar 2 puntos a Drácula porque ya me está dando miedo que nos quiera comer a todos y 6 puntos a la Momia solo por….. por….. pues por pinche mamón y tragón</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Señora Ana Lisa"</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ya analicé por eso te los estoy diciendo jefa.</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa: "No señora, usted así se llama"</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ya ya ya entendí pinche vieja hija de la chin…</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "¿Perdón Doña Milano?"</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Que ya entendí jefa hermosa de mi corazón</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa  - "Eso ni siquiera rima"</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :A pues muy su pedo, cada quien escucha lo que quiere, pero bueno jefa, le decía que le voy a dar a Draculón un punto, pues solo por Puto, o sea por darle un punto y cuatro a la Momia pues… por mamón, fresón y tragón</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Ok Doña Milano, gracias. Algo que le quiera decir a Querétaro para que voten por usted?</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Si claro que si, por favor voten por mí, se los pido con mucho cariño y de todo corazón, a los que voten por mi les voy a estar eternamente agradecida y a los que no voten por mí, pues que chinguen a su ma…..</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Señora Milano, no puede decir eso al aire"</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :No se lo dije al aire, se los dije a esos hijos de la chin….</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa -"Gracias Señora Milano"</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa -"Momia, puedes pasar al confesionario"</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Obiusly que si mi cheaf voy volando para allá</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Oyyy a la gacela!, ni que fueras bruja y delgada como yo para volar</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Nena, tu vuelas solo con tu palo de escoba, ni que fueras super man</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :En vez de volando ha de ir rodando bromis bromis.</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :No seas metiche Draculin, y tú, pedazo de carne envuelta ,un palo es lo que necesitas para que se te quite tu mal carácter pinche momia de Guanajuato</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :No te equivoques linda, yo soy Momia Egipcia, el hijo perdido de Tutan Kamón</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Dirás Tutan Jamón</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :o Tutan Caguamón</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :o tu tas rotoplas, no rima pero ¡me gusta como suena!</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Magnesio, silicio y plomo… jajajajja, ¿o de que hablan?</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Les pido por favor que dejen de pelear"</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Hola Momia, buenas noches"</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Claro mi Cheaf, pues yo le doy 4 puntos a Doña milano porque le cuelgan las chichis hasta las rodillas y además me hace un buen de Bullyng y neta eso está del super navo, ojalá que se muera.... </p>
+
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :y un punto a Maly Boo pues… pues por pendejo y estrategia.</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio Jefa: "Ok Momia muchas gracias"</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Muchas gracias mi Cheaf, vales mil, never change y a todo México les digo que voten por mi please, de verdad que no se van a arrepentir, yo les prometo que si votan por mi, voy a repartir todas las riquezas de Egipto con todo el mundo, yo se donde se esconden los tesoros mas preciados de mi papi, aparte les prometo por esta y también por esta que yo no los voy a defraudar…</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ay ya cállate pinche escuincle mamón, ya acabó tu tiempo</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa: "Por favor Maly Boo"</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Sí Jefa,pues yo le quiero dar 2 puntos a Zorraya, 2 puntos a Drácula, 2 punto a Doña Milano, 2 puntos a la momia y 2 puntos a mí.</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa -  "Maly Boo, te recuerdo que".</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Ok jefa, le voy a dar 2 puntos a Drácula, 2 puntos a Doña Milano y 2 puntos a mí</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa -  " Maly Boo, escúchame..."</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :A ok jefa, pues le doy 7 puntos a Doña Milano por que por su culpa me morí, Ojalá que te mueras, que todo tu mundo se vaya al olvido, Sé que no debo odiarte pero es imposible tratar de olvidar lo que hiciste conmigo…</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa -  "Maly Boo, si estás re pen…. "</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Ojalá que te mueras, que todo tu mundo se quede vacío, ojalá cada gota de llanto te queme hasta el alma, ijalá que no encuentres la calmaaaa, ojalá que te mueras…</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Zorraya pasa al confesionario"</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Ya estoy aquí jefa</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Muy bien mi bella Zorraya"</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Claro que si jefa hermosa!!!! Yo le voy a dar mis 5 puntos a usted querida jefa, solo porque me dijo Bella</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Zorraya pero no puedes sacarme a mi"</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Ahh que no son puntos a favor?</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Si parece día de muertos"</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :A mi no me esté insultado jefa, no sabe con quien se mete!!!!!! Yo soy la gran bruja Zoooorrrayyaaaa (Intenta hace un hechizo) Con los hechizos mas poderosos, hoy en la casa de los Famounstruos, hagan que a la jefa se le pudra el tamal y así me deje de molestar. Ho poderes de la noche, se los pido con disimulo para que a la jefa se le caiga el cu…. Cutiz, y una vez vieja y arrugada, se vaya a la carcajada y no me tenga tan regañada.</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Zorraya, te recuerdo que tampoco me puedes hechizar"</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Ash, me lleva la fregada!!!!!! Ok está bien Jefa. Yo le doy 4 puntos al director de esta obra por no hacerme la estrella, un punto a ti porque me dijiste bella pero estoy cansada de que me des órdenes y dos puntos a Draga Cula, perdón Drácula</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "No puedes darnos puntos"</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Claro que si, lo hago porque se me da la gana, porque quiero, porque puedo, porque me lo merezco, porque tengo la personalidad, porque entre ser y no ser yo soy…. A chinga ese texto es de otro personaje que hago en otra obra</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - " Ya Gracias Zorraya, puedes retirarte"</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :!No puede ser!, ¡Ayudaaaaaaaa!</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Weeeee que te pasa????? Estás mas blanco de lo normal, que te pasa?</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Momia…!I see dead people, jajajaja, esta bien chido este churrooo ( o algo así)</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :¿Cómo, qué pasó?</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :¡Que está muerta, está muerta!</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :¿Quién está muerta?</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Doña Milano, está muerta!</p>
+
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Parece muerta pero no está muerta, está a dos pasos pero aquí sigue la viejita</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :No de verdad, la vi tirada en el jardín y está muerta no respira.</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :A mi ni me vean, yo solo tomo sangre fresca, no me gusta la carne congelada</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - " Habitantes, efectivamente la señora Milano está muerta,"</p><br><br><br>
+
+
+        <h2 id="intermedio">I N T E R M E D I O </h2><br><br><br>
+        
+
+
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - " Habitantes regresen a la sala todos en este momento "</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Seguramente escapó durante el intermedio, el debe de ser el culpable!!!!!!</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Todos en este momento ayúdenme a encontrar "</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :(Regresan al escenario) O sea que super mal plan, no está por ningún lado Jefa!!!! El muy desgraciado mató a la pobre ancianita y se escapó</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Si Jefa es mas que evidente que el es el culpable, ya déjenos salir de aquí</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Maldito infeliz, tan estúpido que se veía, pero así son todos los hombres desgraciados, traicioneros, (Cachonda) sexys, candentes, sabrosos… como el señor de allá que no me quita la mirada de encima (Juega con el desde el escenario) Saliendo de aquí nos vemos guapo</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Activen todas la alarmas"</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :(Entra por público, espantando a la gente con un fuerte grito y golpes, trae una cola de papel de baño con nutela) Que pasa???? Que pasa????? Porque están sonando las alarmas??? Está temblando????</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :(Lo trae de las greñas al escenario) Jefa aquí está este desgraciado!!!! (Lo ve con deseo) Sabroso, cachondo, sensual….(Le da una nalgada)</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Zorraya, no es momento de que andes de pu"</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Solo fui al baño, estaba liberando a Willy cuando sonaron las alarmas y tuve que salir corriendo, ya ni me alcance a limpiar bien (Se ve el papel y se lo quita y lo avienta al público)</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Ok te creo Maly Boo, aún así"</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :(Se pone loca) Ya confiesen hijos de la chimichurri, que si no, nos van a meter a todos a la cárcel, y una hermosa mujer como yo no se puede podrir en la cárcel, sería un gran desperdicio (Regresa sexosa con el señor del público) A poco no señor???? Yo tengo muchas cosas que hacer saliendo de esta casa, creo que por fin ya encontré a mi media naranja, que digo naranja, a mi limón entero, que digo limón…. a mi zanahoria…. Que digo zanahoria…. A mi chile serrano… que digo chile… a mi….</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :A ver Zorraya, ya luego nos cuentas de la verdulería que encontraste, más bien ya en super buen plan y así wey, digan quien mató a Doña Milano, yo ya me quiero largar de aquí</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :(Tipo investigador y con autoridad, los sienta a todos como en juicio) A ver silencio todos!!!! La última vez que se le vio con vida a la señora Ana Liza Milano Aguado</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :(Interrumpe) Ay Draculito, mejor no digas su nombre completo, suena muy desagradable, mejor dile señora Cien Colas o Mil nalgas</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Pues ese era el nombre de la occisa, pero bueno, dejémoslo en Doña Milano. Les decía, que la última vez que se le vio con vida a la ahora difunta</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :(Vuelve a interrumpir) Pues así que digas tu, que bruto con cuanta vida se le veía a la señora pues no verdad!!!!! Así que digas tu, uta que bárbara que jovial estaba toda ella, pues tampoco… así que digas tu….</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Zorraya me dejas continuar?</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Pues es que ya me diste hueva cabrón, ve al grano</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Ay no!!!!! al grano que asqui weeeee, porque Doña Milanoo si tenía un grano bien feo en el cuello, no se lo vieron?</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :A ver Momia… y tu como sabes que Doña Cien culos… perdón, se me quedó el nombre que dijo Zorraya (Se caga de risa) es que ya entendí jajajajaja Cien culos, o Mil nalgas que cagado Zorraya, es que no había entendido porque jajajajaja (Recapacita y vuelve de investigador serio) perdón!!! A ver Momia como sabías de su grano???? Confiesa!!!!! Tu la mataste verdad??? Porque nadie mas se lo había visto</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Obvio yo no la maté Baby!!!! Pero su grano era evidente, grande, prominente!!!! Que poco observadores son. Aparte yo que necesidad tendría de matar a una viejita, a mi me gusta espantarlas nada más. Que no vieron mi película que hice con el Santo, la de El Santo contra las momias de Guanajuato?</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Pues no que eras Egipcia pinche mentiroso!!!! Ya decía yo que tu con ese porte autóctona, humilde ,corriente y cuerpo de rotoplast, no podías ser hijo de TutancaMón, pinche ridículo</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :(Nervioso) No o sea, lo que pasa es que….</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :Ya, ya, ya te cacharon Momia. Vamos a lo importante. Alguien más había visto el grano en el cuello de Doña Milano? Hablen!!!!!! (Se les acerca para intimidarlos, viéndolos a la cara)</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :(No resiste la mirada retadora de Drácula, está muy nervioso y habla) Bueno yo siiiii, yo siiiiii yo siiiii pero les juro que yo no la maté (Sigue muy nervioso)</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Entonces porque estás tan nervioso pinche sabroso???? (Lo empiecen a cerrar en un círculo, acercándose todos poco a poco para intimidarlo) Ya confiesa!!!! Porque la mataste?????</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Que mal plan y así Maly Boo, la hubieras dejado vivir, si a la señora ya le queda poco tiempo de vida</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :(Burlándose) Siiiii como 5 minutos jajajajaja que digo 5, menos… como 10 jajajaj si ya hasta le decían la Chavelo!!!!! Jajajaja (Recapacita) Que en paz descanse y con todo respeto</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Que poca Mami tienes Zorraya, con Chavelo no te metas, el era amigo de todos los niños, yo mejor me persino, En el nombre del papi, del junior y de la palomita blanca, así sea</p>
+        <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong> :(Maly Boo sigue en el piso muy nervioso rodeado por los demás) Bueno ya!!!!! Confiesa Maly Boo, porque la mataste?????</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :(Se desespera y se levanta encabronado, cambiando totalmente de actitud) (Se ve fuerte y valiente) Ya déjenme en paz!!!!! Aléjense de mi pinches monstruos, ya me tienen hasta la madre!!!! Ya me agarraron de su idiota y ya estoy harto!!!!! (Los demás se espantan pues no lo habían visto así) Ya les dije que yo no la mate!!!!!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :A cabrón, ahora si ya me dio miedo!!!!! (Otra vez sexosa se le acerca) Pero así me gustan, machos, valientes, varoniles….</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Y tu pinche bruja ya déjame en paz!!!!!! pareces la fusión de Silvia Pinal con Lin May y un poco de Ninel Conde</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Por lo bonita verdad?????</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Nooooooo, estás horrible!!!!!!!!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Que te pasa!!!!!! Si yo me parezco a Britney Spears (Comienza canción de Britney Spears y su transformación. Baila con el público y regresa para bailarle a Maly Boo)</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Ya basta!!!!! Aléjate de mi, ya te dije que no me gustas</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :(Entra adormitada pero enojada) Que pasa???? Porque tanto grito???? Con una chingada, no dejan dormir!!!!!!</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :(Todos la ven sorprendidos menos Maly Boo) Doña Milanoooooo</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Está viva!!!! Está viva!!!!! (Recapacita) Bueno eso creo. Doña Milano pensamos que estaba muerta</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :(Jugando) No estaba muerta andaba de parranda!!!! Jijiji no digas pendejadas mijito, como voy a estar muerta, si estoy mas viva que nunca!!!!</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Pues comuníqueselo a su cara!!!! Pues nos dijeron que estaba muerta pinche viejita</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :No mi reina, como crees!!!! Si ya te dije que me siento mas viva que nunca!!!!!, verdad Maly Boo???</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Así es mi amor</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :O sea como que mi amor? Ya no estoy entendiendo nada, helloooo que alguien me explique weeeee</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Pues lo que pasa es que mi bombón y yo, nos queríamos despedirnos de la casa y pues nos dimos una escapadita, pero después de despeinar a la cotorra, me dio mucho sueño, porque si estuvo bien intensa la despedida verdad mi amor????</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Que asco!!!!! (Le dice a Maly Boo) Y dices que yo me parezco a Lin May!!! No chingues!!!! Si aquí tu viejecita si parece momia, que digo momia, parece el gusano que se comió a la momia. Con que poco te conformas Maly Boo, cambiaste un Ribay del mejor restaurante, por un pinche taco de tripa de la esquina</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Jijiji Ay no digas mamadas mi niña, si yo todavía tengo lo mío, todavía muevo las caderas re bien</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :A ver!!!! Pero entonces por qué nos dijeron que estaba occisa, difunta, muerta y así weeee???? Y las marcas en el cuello???? Cerca de su grano (con asco) diuuuuu</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Pues es que aquí me bombón se puso fogozo y me dio unos besitos muy intensos en el cuello, pero no son moretones, son chu… bueno, el chiste es que acabé bien cansada y cuando me canso duermo muuuuy profundamente como un angelito</p>
+        <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong> :Pues ya está a dos de que le salgan las alas pinche viejita, si usted ya está robando oxigeno, ya de una vez váyase al cielo, o al infierno mejor!!!!!</p>
+        <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong> :Ya Zorraya, no voy a permitir que le hables así a mi hermosa dama</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Hija de la chingada (Comienzan a pelear todos en Adliv)</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Habitantes!!!! Habitantes!!!!!!.... "</p>
+        <p style="color: rgb(255, 0, 0);"> <strong> Momia:</strong> :Ya se le quitó la tos verdad jefa????</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Perdón, me ofusqué. "</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Todos:</strong> :Siiiiiiii (Salen a ponerse algún atuendo de gala para la final)</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - " Muy buenas noches querido público"</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Bien estoy de regreso con ustedes"</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Ay ya no mames, no la hagas tanto de emoción, ahora si me va a dar un paro</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Si, está bien Doña Milano. Y el ganador o ganadora es"</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Ganador:</strong> :Jefa ya se fueron todos, y el premio????</p>
+        <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong> :Audio de la Jefa - "Lo lamentamos mucho pero me dice producción"</p>
+        <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong> :Hija de la chingada!!!! (BLACK)</p>
+
+
+
+
+
+                
+
+
+
+
+
+       
+        
+        
+        
+        
+        
+    </div>
+
+
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+
+    <script>
+
+        // Mostrar la barra de menú cuando el mouse o el dedo se mueva sobre la zona sensible
+        var zonaSensible = document.getElementById('zona-sensible');
+        var menuBarra = document.getElementById('menu-barra');
+
+        zonaSensible.addEventListener('mouseenter', function() {
+            menuBarra.style.display = 'block';
+        });
+
+        zonaSensible.addEventListener('mouseleave', function() {
+            setTimeout(function() {
+                menuBarra.style.display = 'none';
+            }, 2000); // Ocultar la barra después de 2 segundos si el mouse sale de la zona sensible
+        });
+
+        // Mostrar la barra de menú en dispositivos móviles cuando se toque la zona sensible
+        zonaSensible.addEventListener('touchstart', function() {
+            menuBarra.style.display = 'block';
+        });
+
+        // Ocultar la barra de menú automáticamente después de un tiempo
+        zonaSensible.addEventListener('touchend', function() {
+            setTimeout(function() {
+                menuBarra.style.display = 'none';
+            }, 3000); // Oculta la barra después de 3 segundos si no se interactúa
+        });
+   
+
+
+
+
+        function playAudio(song) {
+            var audio = document.getElementById('audioPlayer');
+            if (audio.src !== song) {
+                audio.src = song;
+            }
+            audio.play();
+        }
+
+        function stopAudio() {
+            var audio = document.getElementById('audioPlayer');
+            audio.pause();
+            audio.currentTime = 0;
+            setVolume(0.5);  // Restablece el volumen a 50%
+            document.getElementById('volumeControl').value = 0.5;  // Actualiza el control deslizante
+        }
+
+
+        function restartAudio() {
+            var audio = document.getElementById('audioPlayer');
+            audio.currentTime = 0;
+            audio.play();
+            setVolume(0.5);  // Restablece el volumen a 50%
+            document.getElementById('volumeControl').value = 0.5;  // Actualiza el control deslizante
+        }
+
+        function setVolume(volume) {
+            var audio = document.getElementById('audioPlayer');
+            audio.volume = volume;
+        }
+
+
+
+
+        
+        // Obtener todos los elementos de texto en el cuerpo del documento
+        var textElements = document.body.getElementsByTagName('*');
+        
+        // Obtener todos los elementos de texto en el cuerpo del documento
+        var textElements = document.body.getElementsByTagName('*');
+        
+
+        function hardReload() {
+            window.location.reload(true);
+        }
+
+        function toggleMenu() {
+            const menuButton = document.querySelector('.menu-button');
+            const menuContent = document.getElementById('menuContent');
+            menuButton.classList.toggle('open');
+            menuContent.classList.toggle('open');
+        }
+
+       
+    </script>
+</body>
+</html>
