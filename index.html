@@ -151,12 +151,15 @@
         <!-- Aquí puedes agregar tus imágenes y botones -->
         
         <button class="reload-button" onclick="hardReload()">Actualizar</button>
+        
         <button class="nav-button" onclick="location.href='#personajes'">Personajes</button>
+        <button class="nav-button" onclick="location.href='#1RA_2DA_3RA_llamadas'">Llamadas INICIO</button>
         <button class="nav-button" onclick="location.href='#opening'">Opening</button>
         <button class="nav-button" onclick="location.href='#Maly_inspirado'">Maly Inspirado</button>
         <button class="nav-button" onclick="location.href='#El_tango'">Tango</button>
         <button class="nav-button" onclick="location.href='#nominaciones'">Nominaciones</button>
         <button class="nav-button" onclick="location.href='#intermedio'">Intermedio</button>
+        
 
        
     
@@ -185,16 +188,44 @@
         <p style="color: rgb(243, 5, 152);font-weight: bold;">El Conde Drácula:</p>
         <p style="color: rgb(243, 5, 152);">Tiene porte y elegancia, medio afeminado,  pero sufre del trastorno de personalidad múltiple</p>
 
+        <h2 id="1RA_2DA_3RA_llamadas"></h2>
         <p style="color: rgb(200, 0, 255);font-weight: bold;">Bruja Zorraya:</p>
         <p style="color: rgb(200, 0, 255);">Poderosa, glamurosa, desalmada, desnalgada, deschichada y bien chiflada</p>
 
-
-        <h2 id="opening"></h2>
         <p style="color: rgb(0, 0, 255);font-weight: bold;">Maly Boo:</p>
         <p style="color: rgb(0, 0, 255);">Un fantasma atractivo medio exhibicionista, se siente el todas mías pero es un poco lento de pensamiento y nunca entiende los chistes y los albures que le hacen sus compañeros de casa</p>
                         
         </div>
 
+
+        <h2 id="opening"></h2>
+
+        <h2>1ra. 2da. y 3ra. llamada</h2>
+
+
+        
+
+        <button onclick="playAudio('81 Primera LLamada INICIO DOÑA MILANO.mp3')">Reproducir 1RA LLAMADA INICIO</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br>
+            
+        
+        
+        <button onclick="playAudio('82 Segunda LLamada INICIO DRACULON.mp3')">Reproducir 2DA LLAMADA INICIO</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br>
+
+        
+
+        <button onclick="playAudio('83 Tercera LLamada INICIO ZORRAYA.mp3')">Reproducir 3RA LLAMADA INICIO</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br>
+        
+        
+        
 
         <h2>Opening</h2>
 
@@ -238,11 +269,11 @@
         <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong>¿De qué nos reímos?</p>
         <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong>Ay mi pendejo, ay mi pendejo, ay mi pendejo...  perdón mi pequeño.</p>
         <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong>Ni tan pequeño, porque su apellido es Milano jajaja con que su segundo apellido no sea ¡profundo!</p>
+        <h2 id="Maly_inspirado"></h2>
         <p style="color: rgb(4, 172, 4);"> <strong> Doña Milano:</strong>No, mi segundo apellido es Aguado, de los Aguado de abolengo.</p>
         <p style="color: rgb(200, 0, 255);"> <strong> Zorraya:</strong>Salió peor anciana, Ana Liza Milano Aguado jajajajaja que chinga le pusieron, con razón no nos había dicho su nombre completo, déjelo así, como Doña Milano.</p>
         
-        <h2 id="Maly_inspirado"></h2>
-        
+                
         <p style="color: rgb(0, 0, 255);"> <strong> Maly Boo:</strong>Pues la verdad, yo ya quiero que termine todo esto, ya me quiero ir con mi primo Gasparín al otro lado.</p>
         <p style="color: rgb(243, 5, 152);"> <strong> Drácula:</strong>¿al más allá, al más acá o pásalas pa´ acá o te las paso pa´ allá?</p>
 
@@ -976,6 +1007,30 @@
 
 
         <h2>I N T E R M E D I O </h2><br><br>
+
+
+
+        <button onclick="playAudio('84 Primera LLamada INTERMEDIO DOÑA MILANO.mp3')">Reproducir 1RA LLAMADA INTERMEDIO</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br>
+            
+        
+        
+        <button onclick="playAudio('85 Segunda LLamada INTERMEDIO DRACULON.mp3')">Reproducir 2DA LLAMADA INTERMEDIO</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br>
+
+        
+
+        <button onclick="playAudio('86 Tercera LLamada INTERMEDIO ZORRAYA.mp3')">Reproducir 3RA LLAMADA INTERMEDIO</button>
+            <button onclick="stopAudio()">Detener</button>
+            <label for="volumeControl">Vol: </label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" oninput="setVolume(this.value)" /><br>
+        
+        
+
         
 
         <p style="color: rgb(85, 79, 79);"> <strong> Jefa:</strong>Audio de la Jefa - " Habitantes regresen a 
