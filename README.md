@@ -1,2 +1,2 @@
-# famonstruos
-pagina para el guión de la casa de los famosos
+# Audios Leyendas Bernal
+pagina para controlar los tracks para las leyendas de Bernal
